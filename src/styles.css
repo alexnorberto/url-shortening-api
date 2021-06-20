@@ -1,1 +1,92 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root{
+
+--Cyan: hsl(180, 66%, 49%);
+--DarkViolet: hsl(257, 27%, 26%);
+
+--Red: hsl(0, 87%, 67%);
+
+--White: hsl(0, 0%, 100%);
+--GrayLight: hsl(225,3%,95%);
+--Gray: hsl(0, 0%, 75%);
+--GrayishViolet: hsl(257, 7%, 63%);
+--VeryDarkBlue: hsl(255, 11%, 22%);
+--VeryDarkViolet: hsl(260, 8%, 14%);
+
+--toolbar-height: 100px;
+}
+
+@media (max-width: 600px) {
+    
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+    position: relative;
+    background-color: var(--GrayLight);
+}
+
+.lightText{
+    color: var(--GrayishViolet);
+}
+
+.darkText{
+    color: var(--VeryDarkViolet)
+}
+
+.whiteText{
+    color: var(--White)
+}
+
+
+
+:focus{
+    outline: none !important;
+}
+
+.button{
+    background: var(--Cyan);
+    color: var(--White);
+    padding: 10px 30px;
+    border: 0;
+    cursor: pointer;
+}
+
+.button:hover{
+   opacity: .6;
+}
+
+.button-round {
+    border-radius: 25px;
+}
+
+.button-square {
+    border-radius: 5px !important;
+}
+
+.button-small{
+    font-size: 16px;
+    width: 90px;
+    padding: 6px 12px;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+a{
+    text-decoration: none;
+}

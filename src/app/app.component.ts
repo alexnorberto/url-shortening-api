@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'url-shortening-api';
+
+
+
+  constructor(
+
+  ){
+
+  }
+
+    ngOnInit(){
+     
+    }
+
 }

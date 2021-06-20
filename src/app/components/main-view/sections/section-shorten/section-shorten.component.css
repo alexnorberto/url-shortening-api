@@ -1,0 +1,80 @@
+@import url(../../main-view.component.css);
+
+/* SECTION SHORTEN */
+#section-shorten .section-container{
+    position: relative;
+    overflow:visible;
+}
+
+#section-shorten-input{
+    margin-top: -70px;
+    background-color: var(--DarkViolet);
+    background-image: url(/assets/images/bg-boost-desktop.svg);
+    background-size: cover;
+    padding: 30px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+#section-shorten-input-error{
+    display: flex;
+    color: var(--Red);
+    font-style: italic;
+    font-size: 12px;
+    text-align: right;
+    position: absolute;
+}
+
+#section-shorten-input input{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: var(--GrayishViolet);
+    width: 100%;
+}
+
+#section-shorten-input input:invalid{
+    border: 2px solid var(--Red);
+    color: var(--Red);
+}
+
+#section-shorten-input input::placeholder {
+    color: var(--Red);
+}
+
+#section-shorten-input button{
+    width: 180px;
+}
+
+#shorten-link-list{
+    width: 100%;    
+}
+
+
+@media (max-width: 960px) {
+    #section-shorten-input button{
+        width: 100%;
+    }
+
+    
+    #section-shorten-input{
+        margin-top: -140px;
+    }
+
+}
+
+
+.shorten-link-line{
+    width: 100%;
+    padding: 15px;
+    background: var(--White);
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.link-original {
+    color: var(--VeryDarkViolet);
+}
+.link-shorten {
+    color: var(--Cyan);
+}

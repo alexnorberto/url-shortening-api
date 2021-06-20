@@ -1,0 +1,76 @@
+#main-toolbar{
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--toolbar-height) !important;
+    background-color: var(--White);
+}
+
+.main-container {
+    width: 1240px;
+    min-width: 335px;
+    margin: 20px;
+}
+
+#main-title{
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--VeryDarkViolet);
+    cursor: pointer;
+}
+
+#main-nav {
+    margin: 50px;
+}
+
+#main-toolbar a {
+    color: var(--GrayishViolet);
+    font-weight: 500;
+    margin-right: 30px;
+}
+
+#main-toolbar a:hover {
+    color: var(--VeryDarkViolet);
+}
+
+@media (max-width: 600px) {
+
+}
+
+#router-container {
+    margin-top: var(--toolbar-height);
+    min-height: 80vh;
+}
+
+#main-footer{
+    background-color: var(--VeryDarkViolet);
+    width: 100%;
+    padding: 30px;
+    color: var(--White);
+}
+
+#main-footer h2 {
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+#main-footer h3 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+#main-footer a{
+    color: var(--White);
+    margin: 10px 0;
+}
+
+#main-footer a:hover {
+    color: var(--Cyan);
+}
+
+#main-footer a:hover {
+    filter: invert(39%) sepia(86%) saturate(564%) hue-rotate(134deg) brightness(85%) contrast(90%);
+} 
