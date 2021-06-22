@@ -6,12 +6,22 @@
     width: 100%;
     height: var(--toolbar-height) !important;
     background-color: var(--White);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-.main-container {
+#main-toolbar-container {
     width: 1240px;
     min-width: 335px;
     margin: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #main-title{
@@ -35,6 +45,13 @@
     color: var(--VeryDarkViolet);
 }
 
+#main-toolbar-left, #main-nav, #main-toolbar-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 @media (max-width: 600px) {
 
 }
@@ -49,11 +66,49 @@
     width: 100%;
     padding: 30px;
     color: var(--White);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* fxLayout="row" fxLayoutAlign="space-between start" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center"*/
+#main-footer-container {
+    width: 1240px;
+    min-width: 335px;
+    margin: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+/* fxLayoutGap="80px" fxLayout="row" fxLayoutAlign="space-between start" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center" */
+#main-footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;    
+}
+
+.main-footer-links-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;   
+    margin-right: 50px; 
+}
+
+#main-footer-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;  
 }
 
 #main-footer h2 {
     margin-bottom: 50px;
     cursor: pointer;
+    text-align: center;
 }
 
 #main-footer h3 {
@@ -74,3 +129,15 @@
 #main-footer a:hover {
     filter: invert(39%) sepia(86%) saturate(564%) hue-rotate(134deg) brightness(85%) contrast(90%);
 } 
+
+@media (max-width: 960px) {
+    #main-footer-container, #main-footer-links, .main-footer-links-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-footer-links-column {
+        margin: 0 0 50px;
+    }
+}

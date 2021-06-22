@@ -4,6 +4,11 @@
 #section-shorten .section-container{
     position: relative;
     overflow:visible;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #section-shorten-input{
@@ -14,6 +19,16 @@
     padding: 30px;
     width: 100%;
     border-radius: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#section-shorten-input-block{
+    position: relative;
+    width: 100%;
 }
 
 #section-shorten-input-error{
@@ -30,7 +45,8 @@
     border-radius: 10px;
     border: none;
     color: var(--GrayishViolet);
-    width: 100%;
+    width: 98%;
+    margin-right: 20px !important;
 }
 
 #section-shorten-input input:invalid{
@@ -38,7 +54,7 @@
     color: var(--Red);
 }
 
-#section-shorten-input input::placeholder {
+#section-shorten-input input:invalid::placeholder {
     color: var(--Red);
 }
 
@@ -50,31 +66,90 @@
     width: 100%;    
 }
 
-
-@media (max-width: 960px) {
-    #section-shorten-input button{
-        width: 100%;
-    }
-
-    
-    #section-shorten-input{
-        margin-top: -140px;
-    }
-
-}
-
-
 .shorten-link-line{
     width: 100%;
     padding: 15px;
     background: var(--White);
     border-radius: 10px;
     margin: 10px 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.shorten-link-line div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.dont-break-out {
+
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+  
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  
+  }
 
 .link-original {
     color: var(--VeryDarkViolet);
+    overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 .link-shorten {
     color: var(--Cyan);
+    margin: 0 20px;
+}
+
+@media (max-width: 960px) {
+    #section-shorten-input-block{
+        margin-bottom: 20px;
+    }
+    #section-shorten-input input{
+        width: 100%;    
+    }
+    
+    #section-shorten-input button{
+        width: 100%;
+    }
+   
+    #section-shorten-input{
+        margin-top: -140px;
+        flex-direction: column;
+    }
+
+    .shorten-link-line{
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+    .shorten-link-line div{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .link-shorten {
+        color: var(--Cyan);
+        margin: 10px 0;
+        width: 100%;
+    }
+
 }

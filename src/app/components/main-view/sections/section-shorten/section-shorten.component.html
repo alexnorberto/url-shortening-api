@@ -1,22 +1,23 @@
 <section id="section-shorten">
-    <div class="section-container" fxLayout="column" fxLayoutAlign="center center">
+    <div class="section-container" >
 
-        <div id="section-shorten-input" fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="center center" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center">
-            <div style="position: relative; width: 100%;">
-                <input placeholder="Shorten a link here..." required>
+        <div id="section-shorten-input">
+            <div id="section-shorten-input-block">
+                <input placeholder="Shorten a link here..." [(ngModel)]="inputValue" >
                 <span id="section-shorten-input-error">Please add a link</span>
             </div>
-            <button class="button button-square">Shorten it!</button>
+            <button type="submit" class="button button-square" (click)="shortenIt()">Shorten it!</button>
         </div>
-
-        <div id="shorten-link-list" >
-            <div class="shorten-link-line" fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="space-between center" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center">
-                <a class="link-original">http://</a>
-                <div fxLayout="row" fxLayoutGap="15px" fxLayoutAlign="space-between center" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center">
-                    <a class="link-shorten">http://</a>
+        <div id="shorten-link-list" *ngIf="!shortenList">Loading...</div>
+        <div id="shorten-link-list" *ngIf="shortenList">
+            <div class="shorten-link-line dont-break-out" *ngFor="let shortens of shortenList">
+                <a class="link-original">{{shortens.original}}</a>
+                <div>
+                    <a class="link-shorten">{{shortens.short}}</a>
                     <button class="button button-square button-small">Copy</button>
                 </div>
             </div>       
         </div>
+        
     </div>
 </section>

@@ -46,8 +46,7 @@ section {
     }
 }
 
-#section-start-img img{
-    width: 120%; 
+#section-start-img object {
 }
 
 .cont{
